@@ -1,65 +1,41 @@
-
 @import "tailwindcss";
 
-:root {
-  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  scroll-behavior: smooth;
-  color-scheme: dark;
+/* 1) Theme colors live in plain CSS variables. Switching <html data-theme="..."> swaps them all. */
+:root,
+[data-theme="dark"] {
+  --bg: #121212;
+  --card: #0f1424;
+  --fg: #ffffff;
+  --muted: #8d9bb8;
+  --line: #2a2d36;
+  --accent: #8fa3c8;
+}
+[data-theme="light"] {
+  --bg: #fafafa;
+  --card: #eef1f7;
+  --fg: #111318;
+  --muted: #5b6784;
+  --line: #d5d9e2;
+  --accent: #3b5bdb;
 }
 
-* {
-  box-sizing: border-box;
+/* 2) Expose the variables as Tailwind colors: bg-bg, text-fg, text-muted, border-line ... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
-html {
-  min-width: 320px;
-  min-height: 100%;
-  scroll-padding-top: 24px;
-}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-weight: 300; }
 
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-}
-
-body,
-button,
-a {
-  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-button {
-  font: inherit;
-}
-
-a {
-  color: inherit;
-}
-
-::selection {
-  color: #10120c;
-  background: #c8f169;
-}
-
-:focus-visible {
-  outline: 2px solid var(--accent, #c8f169);
-  outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
+/* 3) Scrolling rows for the Technologies section */
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { animation: marquee 40s linear infinite; }
+.marquee-reverse { animation: marquee 40s linear infinite reverse; }
+@media (prefers-reduced-motion: reduce) { .marquee, .marquee-reverse { animation: none; } }
