@@ -27,7 +27,7 @@ export default function GitHubActivity() {
     <Section title="GitHub Activity">
       <div className="overflow-x-auto rounded-2xl border border-dashed border-line p-6">
         {days.length ? (
-          <div className="grid w-max grid-flow-col grid-rows-7 gap-[5px]">
+          <div className="grid w-max grid-flow-col grid-rows-7 gap-[3.98px]">
             {Array.from({ length: padding }).map((_, i) => <span key={"p" + i} className="size-2" />)}
             {days.map((d) => (
               <span key={d.date} title={`${d.count} on ${d.date}`} className={`size-2 rounded-full ${LEVELS[d.level]}`} />

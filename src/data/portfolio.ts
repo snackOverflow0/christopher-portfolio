@@ -1,126 +1,351 @@
+
 /**
- * ALL CONTENT LIVES HERE.
- * Everything marked TODO is placeholder text — replace it with your real info.
+ * Christopher Castelo — Portfolio Content
+ *
+ * Only include experience, certifications, and achievements
+ * that you can verify and confidently discuss in an interview.
  */
-import type { Certifications, CommunityInfo, FeaturedItem, Hobbies, Job, Membership, Profile, Project, Tech } from "../types";
+
+import type {
+  Certifications,
+  CommunityInfo,
+  FeaturedItem,
+  Hobbies,
+  Job,
+  Membership,
+  Profile,
+  Project,
+  Tech,
+} from "../types";
+
 import {
-  FaGithub, FaLinkedin, FaEnvelope, FaHtml5, FaCss3Alt, FaJs, FaReact,
-  FaLaravel, FaPhp, FaPython, FaWordpress, FaNodeJs,
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaLaravel,
+  FaPhp,
+  FaPython,
+  FaWordpress,
+  FaNodeJs,
 } from "react-icons/fa";
-import { SiTailwindcss, SiVite, SiPostgresql, SiSupabase, SiVercel } from "react-icons/si";
+
+import {
+  SiTailwindcss,
+  SiVite,
+  SiPostgresql,
+  SiSupabase,
+  SiVercel,
+} from "react-icons/si";
+
+// ============================================================
+// PROFILE
+// ============================================================
 
 export const profile: Profile = {
   name: "Christopher Castelo",
   initials: "CC",
-  avatar: "", // TODO: "/images/avatar.jpg" (put the file in public/images)
+  avatar: "", // Add your professional photo in public/images/avatar.jpg
+
   role: "Full-Stack Developer",
-  specialty: "React & Backend", // TODO
-  intro: "I'm a full-stack developer building thoughtful web experiences and reliable backend systems with", // TODO
+  specialty: "React, TypeScript & Backend Engineering",
+
+  intro:
+    "I build modern web applications and reliable backend systems using",
+
   introChips: [
     { label: "React", icon: FaReact, color: "text-sky-400" },
-    { label: "Tailwind", icon: SiTailwindcss, color: "text-cyan-400" },
+    { label: "TypeScript", icon: FaJs, color: "text-blue-400" },
     { label: "Node.js", icon: FaNodeJs, color: "text-green-500" },
   ],
-  outro: "I'm currently working on ...", // TODO
-  resumeUrl: "#", // TODO: link to your resume PDF
-  location: "Philippines", // TODO
-  email: "you@example.com", // TODO
-  calendarUrl: "#", // TODO: Calendly / Cal.com link
-  quote: "Build, break, repeat.", // TODO
+
+  outro:
+    "Currently building real-world projects, strengthening my backend engineering skills, and preparing to contribute to a professional development team.",
+
+  resumeUrl: "#", // Replace with your actual resume PDF
+  location: "La Union, PH",
+  email: "castelochristopher00@gmail.com",
+  calendarUrl: "#", // Add a booking link if you have one
+
+  quote: "Build with purpose. Learn continuously.",
+
   socials: [
-    { label: "GitHub", href: "https://github.com/snackOverflow0", icon: FaGithub },
-    { label: "LinkedIn", href: "#", icon: FaLinkedin }, // TODO
-    { label: "Email", href: "mailto:you@example.com", icon: FaEnvelope }, // TODO
+    {
+      label: "GitHub",
+      href: "https://github.com/snackOverflow0",
+      icon: FaGithub,
+    },
+    {
+      label: "LinkedIn",
+      href: "#", // Replace with your actual LinkedIn profile
+      icon: FaLinkedin,
+    },
+    {
+      label: "Email",
+      href: "mailto:castelochristopher00@gmail.com",
+      icon: FaEnvelope,
+    },
   ],
+
   githubUser: "snackOverflow0",
 };
 
-export const experience: Job[] = [
-  { date: "Jan 2025 - Present", title: "Job Title", org: "Company Name", place: "City, Country" }, // TODO
-  { date: "Jun 2023 - Dec 2024", title: "Previous Job Title", org: "Previous Company", place: "City, Country" }, // TODO
-];
+// ============================================================
+// EXPERIENCE
+// ============================================================
 
-export const memberships: Membership[] = [
+
+export const experience: Job[] = [
   {
-    name: "Organization Name", // TODO
-    meta: "Community member · Philippines",
-    description: "Short description of the community and your role in it.",
-    verifyUrl: "#",
-    image: "", // TODO: membership card image, e.g. "/images/member-card.png"
+    date: "Project-based",
+    title: "Web Developer",
+    org: "Planning Our Cruise",
+    place: "Remote",
+  },
+  {
+    date: "Project-based",
+    title: "Frontend Developer",
+    org: "Luxury Travel Institute — LTI Review Platform",
+    place: "Remote",
   },
 ];
 
+
+// ============================================================
+// MEMBERSHIPS
+// ============================================================
+
+// Add real organizations or developer communities you belong to.
+// Do not list memberships you have not actually joined.
+
+export const memberships: Membership[] = [];
+
+// ============================================================
+// COMMUNITY
+// ============================================================
+
 export const community: CommunityInfo = {
-  title: "Hackathons, speaking, and community events",
-  description: "A focused collection of the communities I join, contribute to, and learn with.",
-  href: "#", // TODO: link to an events/photos page
+  title: "Building, Learning & Growing",
+  description:
+    "I continuously improve my development skills by building practical applications, exploring new technologies, and learning software engineering best practices.",
+  href: "https://github.com/snackOverflow0",
 };
 
-// First item is shown wide; the others are slim cards that expand on hover.
+// ============================================================
+// FEATURED
+// ============================================================
+
+// Feature real projects instead of inventing speaking engagements
+// or community events.
+
 export const featured: FeaturedItem[] = [
-  { tag: "Community · Speaking", title: "Talk or Event Title", subtitle: "Role · Place", href: "#", image: "", gradient: "from-teal-600 to-lime-500" }, // TODO
-  { tag: "Build", title: "Project", subtitle: "", href: "#", image: "", gradient: "from-slate-800 to-slate-950" },
-  { tag: "Event", title: "Event", subtitle: "", href: "#", image: "", gradient: "from-zinc-800 to-black" },
+  {
+    tag: "Featured Project",
+    title: "StreamFlix",
+    subtitle: "Streaming Platform",
+    href: "https://github.com/snackOverflow0/StreamFlix_Streaming_Platform",
+    image: "",
+    gradient: "from-slate-800 to-slate-950",
+  },
+  {
+    tag: "Web Development",
+    title: "Planning Our Cruise",
+    subtitle: "Cruise Planning Website",
+    href: "https://planningourcruise.com",
+    image: "",
+    gradient: "from-blue-950 to-slate-800",
+  },
+  {
+    tag: "Frontend Development",
+    title: "LTI Review Platform",
+    subtitle: "Client Review Website",
+    href: "https://github.com/snackOverflow0/lti-review-platform",
+    image: "",
+    gradient: "from-zinc-800 to-black",
+  },
 ];
+
+// ============================================================
+// PROJECTS
+// ============================================================
 
 export const projects: Project[] = [
   {
-    title: "Project One", role: "Your role", // TODO
-    description: "One or two sentences about what this project does.",
-    image: "", // TODO: "/images/project-one.png"
-    href: "#",
-    stack: [FaHtml5, FaCss3Alt, FaJs],
+    title: "StreamFlix",
+    role: "Full-Stack Development",
+
+    description:
+      "A streaming platform project featuring user authentication, profiles, subscription management, content browsing, and administrative functionality. Built with a focus on application integration, security, and responsive interfaces.",
+
+    image: "",
+    href: "https://github.com/snackOverflow0/StreamFlix_Streaming_Platform",
+
+    stack: [FaReact, FaJs, SiSupabase, SiVercel],
   },
+
   {
-    title: "Project Two", role: "Your role",
-    description: "One or two sentences about what this project does.",
-    image: "", href: "#", stack: [FaReact, SiTailwindcss, SiVercel],
+    title: "Planning Our Cruise",
+    role: "Frontend Development",
+
+    description:
+      "A cruise planning website that organizes cruise types and itinerary catalogs, helping travelers explore cruise options and access consultation features through a responsive interface.",
+
+    image: "images/planningourcruise.png",
+    href: "https://planningourcruise.com",
+
+    stack: [FaReact, FaJs, SiTailwindcss, SiVite],
   },
+
   {
-    title: "Project Three", role: "Your role",
-    description: "One or two sentences about what this project does.",
-    image: "", href: "#", stack: [FaLaravel, FaPhp, SiPostgresql],
+    title: "LTI Review Platform",
+    role: "Frontend Development",
+
+    description:
+      "A review platform concept for Luxury Travel Institute clients, focused on a clean user experience, responsive layouts, and a straightforward review submission journey.",
+
+    image: "",
+    href: "https://github.com/snackOverflow0/lti-review-platform",
+
+    stack: [FaReact, FaJs, SiTailwindcss, SiVercel],
   },
 ];
-export const allProjectsHref = "#"; // TODO: link to a full projects page / GitHub
 
-// Three rows that scroll sideways in the Technologies section.
+export const allProjectsHref =
+  "https://github.com/snackOverflow0";
+
+// ============================================================
+// TECHNOLOGIES
+// ============================================================
+
 export const technologies: Tech[][] = [
   [
-    { label: "HTML5", icon: FaHtml5, color: "text-orange-500" },
-    { label: "CSS", icon: FaCss3Alt, color: "text-blue-500" },
-    { label: "JavaScript", icon: FaJs, color: "text-yellow-400" },
-    { label: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
-    { label: "Vite", icon: SiVite, color: "text-purple-400" },
-    { label: "React", icon: FaReact, color: "text-sky-400" },
+    {
+      label: "HTML5",
+      icon: FaHtml5,
+      color: "text-orange-500",
+    },
+    {
+      label: "CSS",
+      icon: FaCss3Alt,
+      color: "text-blue-500",
+    },
+    {
+      label: "JavaScript",
+      icon: FaJs,
+      color: "text-yellow-400",
+    },
+    {
+      label: "Tailwind CSS",
+      icon: SiTailwindcss,
+      color: "text-cyan-400",
+    },
+    {
+      label: "React",
+      icon: FaReact,
+      color: "text-sky-400",
+    },
+    {
+      label: "Vite",
+      icon: SiVite,
+      color: "text-purple-400",
+    },
   ],
+
   [
-    { label: "Node.js", icon: FaNodeJs, color: "text-green-500" },
-    { label: "Supabase", icon: SiSupabase, color: "text-emerald-400" },
-    { label: "PHP", icon: FaPhp, color: "text-indigo-400" },
-    { label: "Laravel", icon: FaLaravel, color: "text-red-500" },
-    { label: "Python", icon: FaPython, color: "text-blue-400" },
-    { label: "PostgreSQL", icon: SiPostgresql, color: "text-sky-500" },
+    {
+      label: "Node.js",
+      icon: FaNodeJs,
+      color: "text-green-500",
+    },
+    {
+      label: "Supabase",
+      icon: SiSupabase,
+      color: "text-emerald-400",
+    },
+    {
+      label: "PostgreSQL",
+      icon: SiPostgresql,
+      color: "text-sky-500",
+    },
+    {
+      label: "PHP",
+      icon: FaPhp,
+      color: "text-indigo-400",
+    },
+    {
+      label: "Laravel",
+      icon: FaLaravel,
+      color: "text-red-500",
+    },
+    {
+      label: "Python",
+      icon: FaPython,
+      color: "text-blue-400",
+    },
   ],
+
   [
-    { label: "Vercel", icon: SiVercel, color: "text-fg" },
-    { label: "WordPress", icon: FaWordpress, color: "text-blue-400" },
+    {
+      label: "Vercel",
+      icon: SiVercel,
+      color: "text-fg",
+    },
+    {
+      label: "WordPress",
+      icon: FaWordpress,
+      color: "text-blue-400",
+    },
   ],
 ];
+
+// ============================================================
+// CERTIFICATIONS
+// ============================================================
+
+// Replace these values when you have an actual certificate.
+// Do not publish placeholder credentials on the live website.
 
 export const certifications: Certifications = {
-  main: { date: "Month YYYY", title: "Certification Name", issuer: "Issuer", href: "#", image: "" }, // TODO
-  training: [
-    { date: "Month YYYY", title: "Course Name", issuer: "Provider" }, // TODO
-  ],
+  main: {
+    date: "",
+    title: "",
+    issuer: "",
+    href: "",
+    image: "",
+  },
+
+  training: [],
 };
 
+// ============================================================
+// EDUCATION
+// ============================================================
+
 export const education: Job[] = [
-  { date: "2022 - 2027", title: "Your Degree", org: "Your University", place: "Campus" }, // TODO
+  {
+    date: "2022 - 2027",
+    title: "Bachelor of Science in Information Technology",
+    org: "Don Mariano Marcos Memorial State University",
+    place: "Mid La Union Campus",
+  },
 ];
 
+// ============================================================
+// HOBBIES & PERSONAL INTERESTS
+// ============================================================
+
 export const hobbies: Hobbies = {
-  text: "When I step away from the tech world, I recharge through ... and return to my projects with fresh energy.", // TODO
-  tags: ["Travel", "Gym", "Music"], // TODO
-  photos: [], // TODO: ["/images/hobby-1.jpg", "/images/hobby-2.jpg"]
+  text:
+    "Outside of coding, I enjoy exploring new ideas, learning new technologies, and finding inspiration for projects that solve practical problems.",
+
+  tags: [
+    "Building Projects",
+    "Learning",
+    "Problem Solving",
+  ],
+
+  photos: [], // Add your own photos when available
 };
