@@ -26,3 +26,18 @@ export interface Training { date: string; title: string; issuer: string }
 export interface Certifications { main: Credential; training: Training[] }
 
 export interface Hobbies { text: string; tags: string[]; photos: string[] }
+
+/** One entry in "Community & Involvement" (hackathon, pitching contest, talk, meetup...). */
+export interface EventPhoto { src: string; alt: string }
+export interface InvolvementEntry {
+  category: string;          // filter tab, e.g. "Pitching"
+  date: string;              // shown in the meta line, e.g. "October 23, 2026"
+  title: string;
+  organizer: string;
+  role: string;
+  location: string;
+  description?: string;
+  certificateLabel?: string; // e.g. "Certificate of Participation"
+  certificateImage?: string; // thumbnail + click-to-enlarge
+  photos: EventPhoto[];      // shown in the Events gallery
+}

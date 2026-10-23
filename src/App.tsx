@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Experience from "./components/Experience";
 import Community from "./components/Community";
+import Involvement from "./components/Involvement";
 import FeaturedWork from "./components/FeaturedWork";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
@@ -27,6 +28,7 @@ export default function App() {
         <Hero />
         <Experience />
         <Community />
+        <Involvement />
         <FeaturedWork />
         <Projects />
         <Technologies />

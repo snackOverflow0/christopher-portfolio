@@ -11,6 +11,7 @@ import type {
   CommunityInfo,
   FeaturedItem,
   Hobbies,
+  InvolvementEntry,
   Job,
   Membership,
   Profile,
@@ -133,6 +134,34 @@ export const community: CommunityInfo = {
     "I continuously improve my development skills by building practical applications, exploring new technologies, and learning software engineering best practices.",
   href: "https://github.com/snackOverflow0",
 };
+
+// ============================================================
+// COMMUNITY & INVOLVEMENT
+// ============================================================
+
+// Newest first. Add a new object here for each hackathon, pitch, talk or meetup.
+// Images live in public/images/events/ and are referenced as /images/events/<file>.
+
+export const involvement: InvolvementEntry[] = [
+  {
+    category: "Pitching",
+    date: "October 23, 2026",
+    title: "Philippine Startup Challenge XI \u2013 Regional Pitching Competition (Region 1)",
+    organizer: "DICT Region 1 (Ilocos Region)",
+    role: "Participant \u2014 Team GEIST",
+    location: "Online via Google Meet \u00b7 DMMMSU",
+    description:
+      "Pitched our startup idea, Padaan, to the regional panel alongside teammates Den Carlo D. Aquino and Leann C. Soriano, coached by Mark Kristian C. Ledda.",
+    certificateLabel: "Certificate of Participation",
+    certificateImage: "/images/events/psc-certificate.png",
+    photos: [
+      { src: "/images/events/psc-team-group.jpg", alt: "Team GEIST with supporters after the regional pitch" },
+      { src: "/images/events/psc-presenting.jpg", alt: "Presenting the Padaan thank-you slide during the pitch" },
+      { src: "/images/events/psc-pitch-desk.jpg", alt: "Team GEIST at the pitching desk reviewing notes" },
+      { src: "/images/events/psc-poster.png", alt: "Philippine Startup Challenge Region 1 event poster" },
+    ],
+  },
+];
 
 // ============================================================
 // FEATURED
