@@ -374,6 +374,7 @@ export const hobbies: Hobbies = {
     "Building Projects",
     "Learning",
     "Problem Solving",
+    "Playing Online Games"
   ],
 
   photos: [], // Add your own photos when available
