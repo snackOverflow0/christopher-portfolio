@@ -153,12 +153,12 @@ export const involvement: InvolvementEntry[] = [
     description:
       "Pitched our startup idea, Padaan, to the regional panel alongside teammates Den Carlo D. Aquino and Leann C. Soriano, coached by Mark Kristian C. Ledda.",
     certificateLabel: "Certificate of Participation",
-    certificateImage: "/images/events/psc-certificate.png",
+    certificateImage: "/images/psc-certificate.png",
     photos: [
-      { src: "/images/events/psc-team-group.jpg", alt: "Team GEIST with supporters after the regional pitch" },
-      { src: "/images/events/psc-presenting.jpg", alt: "Presenting the Padaan thank-you slide during the pitch" },
-      { src: "/images/events/psc-pitch-desk.jpg", alt: "Team GEIST at the pitching desk reviewing notes" },
-      { src: "/images/events/psc-poster.png", alt: "Philippine Startup Challenge Region 1 event poster" },
+      { src: "/images/psc-team-group.jpg", alt: "Team GEIST with supporters after the regional pitch" },
+      { src: "/images/psc-presenting.jpg", alt: "Presenting the Padaan thank-you slide during the pitch" },
+      { src: "/images/psc-pitch-desk.jpg", alt: "Team GEIST at the pitching desk reviewing notes" },
+      { src: "/images/psc-poster.png", alt: "Philippine Startup Challenge Region 1 event poster" },
     ],
   },
 ];
@@ -209,7 +209,7 @@ export const projects: Project[] = [
     description:
       "A streaming platform project featuring user authentication, profiles, subscription management, content browsing, and administrative functionality. Built with a focus on application integration, security, and responsive interfaces.",
 
-    image: "",
+    image: "images/streamflix.jpg",
     href: "https://github.com/snackOverflow0/StreamFlix_Streaming_Platform",
 
     stack: [FaReact, FaJs, SiSupabase, SiVercel],
